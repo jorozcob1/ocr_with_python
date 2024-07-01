@@ -1,11 +1,21 @@
-### Explicación del contenido:
+# Text Extractor using Tesseract OCR
 
-1. **Título y Descripción:** Una breve introducción al propósito del script y su funcionalidad principal.
-2. **Características:** Enumera las principales características del script.
-3. **Requisitos Previos:** Detalla las instalaciones y configuraciones necesarias antes de poder usar el script.
-4. **Configuración en Windows:** Instrucciones específicas para usuarios de Windows en relación con Tesseract OCR.
-5. **Uso del Script:** Instrucciones paso a paso sobre cómo preparar y ejecutar el script.
-6. **Salida:** Explica cómo se organiza la salida del script y dónde se puede encontrar.
-7. **Licencia:** Información sobre la licencia bajo la cual se distribuye el script, fomentando la apertura y el uso flexible del software.
+Este script de Python automatiza la extracción de texto de imágenes utilizando la herramienta Tesseract OCR. Es útil para convertir el contenido visualizado en imágenes en texto editable, almacenándolo posteriormente en un archivo de texto para su posterior análisis o almacenamiento.
 
-Este contenido del `README.md` proporciona una guía completa y detallada que ayuda a los usuarios a configurar, ejecutar y entender cómo funciona el script en su propio entorno.
+## Requisitos
+
+Antes de ejecutar el script, asegúrate de tener instalados:
+
+- Python 3.x
+- Tesseract OCR
+- Bibliotecas Python: `PIL`, `pytesseract`, `glob`, `os`
+
+## Configuración
+
+### Windows
+
+Si estás utilizando Windows, es necesario configurar la ruta al ejecutable de Tesseract-OCR. Asegúrate de que Tesseract está instalado y que la ruta especificada en el script apunta correctamente al ejecutable:
+
+```python
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+```
